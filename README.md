@@ -27,7 +27,7 @@ Next enable and install **Collada** support by typing this into your terminal:\
 \
 Next ensure you have **Python 2.x** installed on your system. If you are using a newer version of Linux, you most likely have **Python 3.x** already installed and set as the default version of Python. The SCONS build system Mitsuba 0.6.0 uses; is not compatible with **Python 3.x** and will give you errors if used.\
 \
-Install **Python 2.x** by first adding this repository, then installing **Python 2.7**: (Type these instructions into your terminal). **Python 2.7** is preferred as it is the newest **Python 2.x** version.\
+Install **Python 2.x** by first adding this repository, then installing **Python 2.7**: (Type these instructions into your terminal).**Note:** **Python 2.7** is preferred as it is the newest **Python 2.x** version.\
 \
 ```sudo add-apt-repository ppa:deadsnakes/ppa```\
 ```sudo apt update```\
