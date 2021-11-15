@@ -5,7 +5,7 @@ Mitsuba 0.6.0 is a relatively old software. Many of the build instructions assoc
 \
 These steps have been confirmed to work on **Linux Mint 20.2** (which is built on top of **Ubuntu 20.04**, so it should essentially be the same). Thank you to Jason Brenneman @ www.rrubberr.com for all the invaluable support.\
 \
-Be aware that the use of "*apt*" in regards to downloading and installing packages is a *Ubuntu* specific command and may be different in whatever *Linux distribution* you are using. Make sure to check what your *package manager* is.
+Be aware that the use of *"apt"* in regards to downloading and installing packages is a *Ubuntu* specific command and may be different in whatever *Linux distribution* you are using. Make sure to check what your *package manager* is.
 
 # Build Instructions - Ubuntu:
 First of all: Mitsuba 0.6.0 relies on **qt5** and its libraries in order to build the GUI. If you do not not care about the GUI, this step is not entirely necessary, although it is recommended to build the GUI for efficacy's sake. Install **qt5** and its libraries by typing these instructions into a terminal: \
