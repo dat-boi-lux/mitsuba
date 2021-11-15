@@ -1,22 +1,45 @@
-Mitsuba — Physically Based Renderer
-===================================
-
-http://mitsuba-renderer.org/
-
-## About
-
-Mitsuba is a research-oriented rendering system in the style of PBRT, from which it derives much inspiration. It is written in portable C++, implements unbiased as well as biased techniques, and contains heavy optimizations targeted towards current CPU architectures. Mitsuba is extremely modular: it consists of a small set of core libraries and over 100 different plugins that implement functionality ranging from materials and light sources to complete rendering algorithms.
-
-In comparison to other open source renderers, Mitsuba places a strong emphasis on experimental rendering techniques, such as path-based formulations of Metropolis Light Transport and volumetric modeling approaches. Thus, it may be of genuine interest to those who would like to experiment with such techniques that haven't yet found their way into mainstream renderers, and it also provides a solid foundation for research in this domain.
-
-The renderer currently runs on Linux, MacOS X and Microsoft Windows and makes use of SSE2 optimizations on x86 and x86_64 platforms. So far, its main use has been as a testbed for algorithm development in computer graphics, but there are many other interesting applications.
-
-Mitsuba comes with a command-line interface as well as a graphical frontend to interactively explore scenes. While navigating, a rough preview is shown that becomes increasingly accurate as soon as all movements are stopped. Once a viewpoint has been chosen, a wide range of rendering techniques can be used to generate images, and their parameters can be tuned from within the program.
-
-## Documentation
-
-For compilation, usage, and a full plugin reference, please see the [official documentation](http://mitsuba-renderer.org/docs.html).
-
-## Releases and scenes
-
-Pre-built binaries, as well as example scenes, are available on the [Mitsuba website](http://mitsuba-renderer.org/download.html).
+# mitsuba-0.6.0-modern-linux
+This is a fork of https://github.com/mitsuba-renderer/mitsuba with specific changes and instructions on how to compile for a more modern build of Ubuntu.
+# Introduction:
+Mitsuba 0.6.0 is a relatively old software. Many of the build instructions associated with the original https://github.com/mitsuba-renderer/mitsuba repository no longer work due to their age. This fork aims to allow Mitsuba to build on newer versions of Linux.\
+\
+These steps have been confirmed to work on **Linux Mint 20.2** (which is built on top of **Ubuntu 20.04**, so they should essentially be the same). Thank you to Jason Brenneman @ www.rrubberr.com for all the invaluable support.
+# Build Instructions:
+First of all: Mitsuba 0.6.0 relies on **qt5** and its libraries. Install them by typing these instructions into a terminal: \
+\
+```sudo apt install qt5-default``` \
+```sudo apt install qtdeclarative5-dev``` \
+```sudo apt install libqt5opengl5-dev libqt5xmlpatterns5-dev```\
+\
+please note that if other versions of qt are installed  (such as qt4) there may be conflicts when building.\
+\
+Next install all the required dependencies by typing these instructions into a terminal: \
+\
+```sudo apt install build-essential scons git libpng12-dev libjpeg-dev libilmbase-dev libxerces-c-dev libboost-all-dev libopenexr-dev libglewmx-dev libxxf86vm-dev libeigen3-dev libfftw3-dev```\
+\
+You may already have some of these on your system so ignore any warnings saying that some things were not installed.\
+\
+Next enable and install **Collada** support by typing this into your terminal:\
+\
+```sudo apt-get install libcollada-dom-dev```\
+\
+Next ensure you have **Python 2.x** installed on your system. If you are using a newer version of Linux, you most likely have **Python 3.x** already installed and set as the default version of Python. The SCONS build system Mitsuba 0.6.0 uses is not compatible with Python 3x and will give you errors if used./
+Install Python 2x by first adding this repository: (Type these instructions into your terminal)\
+\
+```sudo add-apt-repository ppa:deadsnakes/ppa```\
+```sudo apt update```\
+```sudo apt-get install python2.7```\
+\
+This should do it for the dependencies. Now onto downloading **this repository** and building Mitsuba.\
+\
+Clone this repository onto your system. This is achieved by typing this command into your terminal:\
+\
+```sudo git clone https://github.com/dat-boi-lux/mitsuba-0.6.0-modern-linux.git```\
+\
+Now that you have cloned the repository onto your computer: navigate to where it has downloaded. On Ubuntu, this should be within your *Home* folder.\
+\
+Open a terminal within this folder. and then type this command into the terminal window you just opened:\
+\
+```QT_SELECT=qt5 python2 `which scons` -j32```\
+\
+An explanation for the command above: first we select the version of **qt** that we want to use (*QT_SELECT=qt5*). We try to be as specific as humanly possible so as not to confuse the build system. Then we select what version of **Python** we want to use (*python2*). This is to ensure that the build systems uses **Python 2.x** that we installed earlier. Next we tell the build system to find the "**SConstruct**" build file (*`which scons`*). Then we specify how many **CPU cores** we want to allocate to the build process (*-j32*). I have opted to use all **32** cores of my CPU, but if your CPU has less cores, you can specify this. Not specifying will result in SCONS using only one core (this is **extremely slow**).
