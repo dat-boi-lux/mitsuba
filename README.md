@@ -11,7 +11,9 @@ First of all: Mitsuba 0.6.0 relies on **qt5** and its libraries in order to buil
 ```sudo apt install qtdeclarative5-dev``` \
 ```sudo apt install libqt5opengl5-dev libqt5xmlpatterns5-dev```\
 \
-please note that if other versions of qt are installed  (such as qt4) there may be conflicts when building.\
+Please note that if other versions of *qt* are installed  (such as *qt4*) there may be conflicts when building. You can remove *qt4* (or any other version of qt by typing this command into the terminal: WARNING: Only do this if you are aware of the repurcussions, other programs may rely on other versions of *qt*.\
+\
+```sudo apt purge qt4*``` ***Note**: replace the '4' with whatever qt version you wish to remove*\
 \
 Next install all the required dependencies by typing these instructions into a terminal: \
 \
@@ -23,7 +25,8 @@ Next enable and install **Collada** support by typing this into your terminal:\
 \
 ```sudo apt-get install libcollada-dom-dev```\
 \
-Next ensure you have **Python 2.x** installed on your system. If you are using a newer version of Linux, you most likely have **Python 3.x** already installed and set as the default version of Python. The SCONS build system Mitsuba 0.6.0 uses is not compatible with Python 3x and will give you errors if used./
+Next ensure you have **Python 2.x** installed on your system. If you are using a newer version of Linux, you most likely have **Python 3.x** already installed and set as the default version of Python. The SCONS build system Mitsuba 0.6.0 uses; is not compatible with Python 3x and will give you errors if used.\
+\
 Install Python 2x by first adding this repository: (Type these instructions into your terminal)\
 \
 ```sudo add-apt-repository ppa:deadsnakes/ppa```\
