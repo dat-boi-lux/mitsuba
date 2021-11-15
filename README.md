@@ -23,7 +23,7 @@ You may already have some of these on your system so ignore any warnings saying 
 \
 Next enable and install **Collada** support by typing this into your terminal:\
 \
-```sudo apt-get install libcollada-dom-dev```\
+```sudo apt install libcollada-dom-dev```\
 \
 Next ensure you have **Python 2.x** installed on your system. If you are using a newer version of Linux, you most likely have **Python 3.x** already installed and set as the default version of Python. The SCONS build system Mitsuba 0.6.0 uses; is not compatible with **Python 3.x** and will give you errors if used.\
 \
@@ -31,7 +31,7 @@ Install **Python 2.x** by first adding this repository: (Type these instructions
 \
 ```sudo add-apt-repository ppa:deadsnakes/ppa```\
 ```sudo apt update```\
-```sudo apt-get install python2.7```\
+```sudo apt install python2.7```\
 \
 This should do it for the dependencies. Now onto downloading **this repository** and building Mitsuba.\
 \
