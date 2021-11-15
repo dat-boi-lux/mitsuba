@@ -14,7 +14,7 @@ First of all: Mitsuba 0.6.0 relies on **qt5** and its libraries in order to buil
 ```sudo apt install qtdeclarative5-dev``` \
 ```sudo apt install libqt5opengl5-dev libqt5xmlpatterns5-dev```\
 \
-Please note that if other versions of *qt* are installed  (such as *qt4*) there may be conflicts when building. You can remove *qt4* (or any other version of qt by typing this command into the terminal: WARNING: Only do this if you are aware of the repurcussions, other programs may rely on other versions of *qt*.\
+Please note that if other versions of *qt* are installed  (such as *qt4*) there may be conflicts when building. You can remove *qt4* (or any other version of qt by typing this command into the terminal): WARNING: Only do this if you are aware of the repurcussions, other programs may rely on other versions of *qt*.\
 \
 ```sudo apt purge qt4*``` ***Note***: replace the '4' with whatever qt version you wish to remove*\
 \
