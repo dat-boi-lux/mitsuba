@@ -4,7 +4,7 @@ This is a fork of https://github.com/mitsuba-renderer/mitsuba with specific chan
 Mitsuba 0.6.0 is a relatively old software. Many of the build instructions associated with the original https://github.com/mitsuba-renderer/mitsuba repository no longer work due to their age. This fork aims to allow Mitsuba to build on newer versions of Linux.\
 \
 These steps have been confirmed to work on **Linux Mint 20.2** (which is built on top of **Ubuntu 20.04**, so it should essentially be the same). Thank you to Jason Brenneman @ www.rrubberr.com for all the invaluable support.
-# Build Instructions:
+# Build Instructions - Ubuntu:
 First of all: Mitsuba 0.6.0 relies on **qt5** and its libraries in order to build the GUI. If you do not not care about the GUI, this step is not entirely necessary, although it is recommended to build the GUI for efficacy's sake. Install **qt5** and its libraries by typing these instructions into a terminal: \
 \
 ```sudo apt install qt5-default``` \
