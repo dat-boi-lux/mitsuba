@@ -1,5 +1,5 @@
 # mitsuba-0.6.0-modern-linux
-This is a fork of https://github.com/mitsuba-renderer/mitsuba with specific changes and instructions on how to compile for a more modern build of Ubuntu.
+This is a fork of https://github.com/mitsuba-renderer/mitsuba with specific changes and instructions on how to compile for a more modern build of Linux/Ubuntu.
 # Introduction:
 Mitsuba 0.6.0 is a relatively old software. Many of the build instructions associated with the original https://github.com/mitsuba-renderer/mitsuba repository no longer work due to their age. This fork aims to allow Mitsuba to build on newer versions of Linux.\
 \
