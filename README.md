@@ -20,7 +20,7 @@ Please note that if other versions of *qt* are installed  (such as *qt4*) there 
 \
 Next install all the required dependencies by typing these instructions into a terminal: \
 \
-```sudo apt install build-essential scons git libpng12-dev libjpeg-dev libilmbase-dev libxerces-c-dev libboost-all-dev libopenexr-dev libglewmx-dev libxxf86vm-dev libeigen3-dev libfftw3-dev```\
+```sudo apt install build-essential scons git libpng-dev libjpeg-dev libilmbase-dev libxerces-c-dev libboost-all-dev libopenexr-dev libglewmx-dev libxxf86vm-dev libeigen3-dev libfftw3-dev```\
 \
 You may already have some of these on your system so ignore any warnings saying that some things were not installed.\
 \
