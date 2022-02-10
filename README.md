@@ -10,9 +10,7 @@ Be aware that the use of *"apt"* in regards to downloading and installing packag
 # Build Instructions - Ubuntu:
 First of all: Mitsuba 0.6.0 relies on **qt5** and its libraries in order to build the GUI. If you do not not care about the GUI, this step is not entirely necessary, although it is recommended to build the GUI for efficacy's sake. Install **qt5** and its libraries by typing these instructions into a terminal: \
 \
-```sudo apt install qt5-default``` \
-```sudo apt install qtdeclarative5-dev``` \
-```sudo apt install libqt5opengl5-dev libqt5xmlpatterns5-dev```\
+```sudo apt install qt5-default libqt5opengl5-dev libqt5xmlpatterns5-dev qtdeclarative5-dev```\
 \
 Please note that if other versions of *qt* are installed  (such as *qt4*) there may be conflicts when building. You can remove *qt4* (or any other version of qt by typing this command into the terminal): WARNING: Only do this if you are aware of the repurcussions, other programs may rely on other versions of *qt*.\
 \
